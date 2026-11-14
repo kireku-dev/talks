@@ -11,10 +11,10 @@ const shape = computed(() => SHAPES[props.v] ?? {})
 
 <template>
   <div class="bubbles" :class="`bubbles--${v}`" aria-hidden="true">
-    <i class="b b1" :class="`shape-${shape.b1 ?? 1}`" />
-    <i class="b b2" :class="`shape-${shape.b2 ?? 2}`" />
-    <i class="b b3" :class="`shape-${shape.b3 ?? 3}`" />
-    <i class="dots d1" />
-    <i class="dots d2" />
+    <i class="blob blob-1" :class="`shape-${shape.b1 ?? 1}`" />
+    <i class="blob blob-2" :class="`shape-${shape.b2 ?? 2}`" />
+    <i class="blob blob-3" :class="`shape-${shape.b3 ?? 3}`" />
+    <i class="spr spr-1" />
+    <i class="spr spr-2" />
   </div>
 </template>

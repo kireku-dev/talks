@@ -32,6 +32,9 @@ jobs:
 
       - run: npm ci
 
+      - name: Install Chromium (miniaturas)
+        run: npx playwright install --with-deps chromium
+
       - run: npm run build
 
       - uses: actions/upload-pages-artifact@v3

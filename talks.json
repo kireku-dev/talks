@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Taller de Git y GitHub",
+    "date": "2026-09-03",
+    "kind": "Taller",
+    "place": "UDEO",
+    "summary": "Ramas, commits, pull requests y flujo colaborativo con GitHub.",
+    "url": "https://github.com/daniel-baf/taller-github-udeo",
+    "cta": "Ver material"
+  },
+  {
+    "title": "Taller de Git y GitHub",
+    "date": "2026-07-31",
+    "kind": "Taller",
+    "place": "Universidad Rafael Landívar",
+    "summary": "Versionado, buenas prácticas y colaboración en proyectos reales.",
+    "url": "https://github.com/daniel-baf/practica-git-github-url-2026",
+    "cta": "Ver material"
+  }
+]

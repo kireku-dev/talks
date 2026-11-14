@@ -5,6 +5,12 @@ info: |
   Taller IA para docentes — Skills · UNACH.
   Qué lleva una skill y por qué funciona.
 author: Daniel Bautista
+talk:
+  date: 2026-11-14
+  kind: Taller
+  event: Taller IA para docentes
+  place: UNACH
+  summary: Qué lleva una skill y por qué funciona; cada docente adapta una skill de planificación con el CNB.
 canvasWidth: 1920
 aspectRatio: 16/9
 routerMode: hash
@@ -27,7 +33,7 @@ class: s t-dark center
 <p class="pill pill--lime">TALLER · UNACH</p>
 <h1 style="width:1040px">Tu propia <span class="ink-yellow">IA</span> para planificar</h1>
 <p class="lead">Qué lleva una skill y por qué funciona</p>
-<p class="footer" style="width:900px">Daniel · [FECHA]</p>
+<p class="footer" style="width:900px">Daniel Bautista · 14 de noviembre de 2026</p>
 
 <!--
 Minuto 0–1. Hoy no aprendemos una app: aprendemos qué lleva una buena instrucción para cualquier IA y por qué. Al final cada quien toma la skill que ya les compartí y la hace suya.
