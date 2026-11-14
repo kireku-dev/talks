@@ -1,0 +1,12 @@
+{
+  "name": "talks",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "slidev decks/ia-para-planificar/slides.md --open",
+    "build": "node scripts/build.mjs"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^53.1.0"
+  }
+}
