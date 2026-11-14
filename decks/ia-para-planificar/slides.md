@@ -21,8 +21,9 @@ fonts:
 class: s t-dark center
 ---
 
-<div class="orb" style="left:1240px;top:180px;width:560px;height:560px;background:var(--yellow)"><span class="orb--word">C·R·T·A·O</span></div>
-<div class="orb" style="left:1176px;top:660px;width:160px;height:160px;background:var(--lime)"></div>
+<Bubbles v="cover" />
+<div class="orb shape-blob" style="left:1240px;top:180px;width:560px;height:560px;background:var(--yellow)"><span class="orb--word">C·R·T·A·O</span></div>
+<div class="orb shape-blob-2" style="left:1176px;top:660px;width:160px;height:160px;background:var(--lime)"></div>
 <p class="pill pill--lime">TALLER · UNACH</p>
 <h1 style="width:1040px">Tu propia <span class="ink-yellow">IA</span> para planificar</h1>
 <p class="lead">Qué lleva una skill y por qué funciona</p>
@@ -36,6 +37,7 @@ Minuto 0–1. Hoy no aprendemos una app: aprendemos qué lleva una buena instruc
 class: s t-cream
 ---
 
+<Bubbles v="cream-a" />
 <p class="pill pill--dark">CÓMO FUNCIONA LA IA</p>
 <h2>La IA predice la palabra más probable</h2>
 <div class="row">
@@ -61,6 +63,7 @@ Minutos 1–4. Lee la frase en voz alta y pregunta: ¿cómo la completarían ust
 class: s t-dark
 ---
 
+<Bubbles v="dark-a" />
 <p class="pill pill--lime">LO QUE IMPLICA</p>
 <h2>Por eso pasan dos cosas</h2>
 <div class="row">
@@ -85,6 +88,7 @@ Minutos 4–6. Si hay tiempo, demo de 1 minuto: pídele 3 referencias APA sobre 
 class: s t-yellow center
 ---
 
+<Bubbles v="yellow-a" />
 <p class="pill pill--dark">UNA ANALOGÍA</p>
 <h2 style="max-width:1500px">La IA es un suplente brillante que no conoce a tu grupo.</h2>
 <div class="card box-dark" style="flex:none;align-self:flex-start;width:1200px;gap:16px">
@@ -101,6 +105,7 @@ Minutos 6–8. Pregunta: ¿qué le dejarían anotado a un suplente? Lo que respo
 class: s t-cream
 ---
 
+<Bubbles v="cream-b" />
 <p class="pill pill--dark">QUÉ ES UNA SKILL</p>
 <h2>Solo texto, bien escrito y reutilizable</h2>
 <div class="row row--tight">
@@ -130,6 +135,7 @@ Minutos 8–9. Rápido: no dependen de ninguna app. Si mañana cambian de herram
 class: s t-dark tight
 ---
 
+<Bubbles v="dark-b" />
 <p class="pill pill--yellow">ANATOMÍA DE UNA SKILL</p>
 <h2>Qué lleva una skill y por qué</h2>
 <div class="crtao">
@@ -175,6 +181,7 @@ Minutos 9–14. El corazón de la expo. Conecta cada fila con lo anterior: el Co
 class: s t-cream
 ---
 
+<Bubbles v="cream-c" />
 <p class="pill pill--dark">LO QUE LA HACE CONFIABLE</p>
 <h2>Dos trucos que ya trae tu skill</h2>
 <div class="row">
@@ -201,6 +208,7 @@ Minutos 14–17. Estos dos trucos responden directo a cómo funciona la IA. Si e
 class: s t-dark
 ---
 
+<Bubbles v="dark-c" />
 <p class="pill pill--yellow">TU TURNO</p>
 <h2 style="max-width:1100px">Agarra la skill y hazla tuya</h2>
 <div class="steps">
@@ -222,6 +230,7 @@ Minutos 17–19. Que escaneen el QR ahora. El CNB: solo competencias e indicador
 class: s t-yellow
 ---
 
+<Bubbles v="yellow-b" />
 <p class="pill pill--dark">PARA LLEVARSE</p>
 <h2>Tres reglas de oro</h2>
 <div class="row row--tight">
@@ -250,7 +259,8 @@ Minuto 19–20. La IA acelera el trabajo; el criterio pedagógico sigue siendo d
 class: s t-dark center
 ---
 
-<div class="orb" style="left:1312px;top:252px;width:480px;height:480px;background:var(--yellow)"><div class="qr-box" style="position:static;width:300px;height:300px;background:var(--cream);border-radius:20px"><QrDrive :size="270" /></div></div>
+<Bubbles v="closing" />
+<div class="orb shape-blob" style="left:1312px;top:252px;width:480px;height:480px;background:var(--yellow)"><div class="qr-box" style="position:static;width:300px;height:300px;background:var(--cream);border-radius:20px"><QrDrive :size="270" /></div></div>
 <h1 class="ink-yellow" style="width:1100px">¿Preguntas?</h1>
 <p class="lead">Escanea el código y llévate las skills.</p>
 <p class="footer">Material del taller: <a href="https://drive.google.com/drive/folders/1PbrIPhr5rtm2xHWogibtzWFLj_geHQLr?usp=sharing" target="_blank" rel="noopener">carpeta UNACH en Google Drive</a></p>
@@ -263,6 +273,7 @@ Deja esta diapositiva proyectada mientras responden preguntas, así todos alcanz
 class: s t-cream
 ---
 
+<Bubbles v="cream-b" />
 <p class="pill pill--dark">BONUS · YA ESTÁ EN TU CARPETA</p>
 <h2>Sigue armando tu plugin</h2>
 <div class="chain">
@@ -295,6 +306,7 @@ Extra, solo si sobra tiempo o alguien pregunta qué más pueden hacer. Los indic
 class: s t-mint
 ---
 
+<Bubbles v="mint" />
 <p class="pill pill--dark">APÉNDICE · DEMO OPCIONAL</p>
 <h2 style="max-width:1500px">Pídele 3 referencias APA… y verifícalas</h2>
 <p class="body" style="width:1300px">Tema: evaluación formativa en primaria. Busca cada una en Google Académico.</p>

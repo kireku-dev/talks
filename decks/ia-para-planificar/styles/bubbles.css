@@ -1,0 +1,182 @@
+/* Fondos estilo "Shibainu" hechos solo con CSS: manchas orgánicas (border-radius
+   irregular) y racimos de puntos (un pseudo-elemento + box-shadow). Cada slide elige
+   una variante con <Bubbles v="..." />; las medidas son px del lienzo 1920×1080. */
+
+.bubbles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.slidev-layout.s > :not(.bubbles) {
+  z-index: 1;
+}
+
+.bubbles .b,
+.bubbles .dots {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  rotate: var(--r, 0deg);
+  display: none;
+}
+
+.bubbles .b {
+  width: var(--w);
+  height: var(--h);
+  background: var(--c);
+  animation: blob-in 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.bubbles .b2 { animation-delay: 0.08s; }
+.bubbles .b3 { animation-delay: 0.16s; }
+
+.bubbles .dots {
+  width: 0;
+  height: 0;
+  color: var(--c);
+  animation: dots-in 0.6s ease-out 0.3s both;
+}
+
+.bubbles .dots::before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 5px;
+  rotate: 45deg;
+}
+
+.bubbles .d1::before {
+  box-shadow:
+    60px 30px 0 currentColor,
+    90px 30px 0 currentColor,
+    120px 30px 0 currentColor,
+    30px 60px 0 currentColor,
+    60px 60px 0 currentColor,
+    90px 60px 0 currentColor,
+    120px 60px 0 currentColor,
+    150px 60px 0 currentColor,
+    30px 90px 0 currentColor,
+    60px 90px 0 currentColor,
+    90px 90px 0 currentColor,
+    120px 90px 0 currentColor,
+    150px 90px 0 currentColor,
+    180px 90px 0 currentColor,
+    60px 120px 0 currentColor,
+    90px 120px 0 currentColor,
+    120px 120px 0 currentColor,
+    150px 120px 0 currentColor,
+    90px 150px 0 currentColor,
+    120px 150px 0 currentColor;
+}
+
+.bubbles .d2::before {
+  box-shadow:
+    30px 30px 0 currentColor,
+    60px 30px 0 currentColor,
+    60px 60px 0 currentColor,
+    90px 60px 0 currentColor,
+    120px 60px 0 currentColor,
+    30px 90px 0 currentColor,
+    60px 90px 0 currentColor,
+    90px 90px 0 currentColor,
+    120px 90px 0 currentColor,
+    150px 90px 0 currentColor,
+    90px 120px 0 currentColor,
+    120px 120px 0 currentColor,
+    150px 120px 0 currentColor,
+    180px 120px 0 currentColor,
+    60px 150px 0 currentColor,
+    90px 150px 0 currentColor,
+    120px 150px 0 currentColor;
+}
+
+/* Tres siluetas orgánicas */
+.bubbles .shape-1 { border-radius: 58% 42% 63% 37% / 47% 58% 42% 53%; }
+.bubbles .shape-2 { border-radius: 40% 60% 35% 65% / 60% 40% 60% 40%; }
+.bubbles .shape-3 { border-radius: 66% 34% 48% 52% / 38% 55% 45% 62%; }
+
+@keyframes blob-in {
+  from { opacity: 0; scale: 0.85; }
+}
+
+@keyframes dots-in {
+  from { opacity: 0; }
+}
+
+/* ---------- Variantes ---------- */
+
+/* cover */
+.bubbles--cover .b1 { display: block; --x: 980px; --y: 420px; --w: 1180px; --h: 860px; --c: #1f5a47; --r: -8deg; }
+.bubbles--cover .b2 { display: block; --x: -260px; --y: -300px; --w: 760px; --h: 600px; --c: #0a2e23; --r: 12deg; }
+.bubbles--cover .b3 { display: block; --x: -120px; --y: 860px; --w: 520px; --h: 380px; --c: #1f5a47; --r: 0deg; }
+.bubbles--cover .d1 { display: block; --x: 1010px; --y: 640px; --c: #fff8e1; --r: -20deg; }
+.bubbles--cover .d2 { display: block; --x: 1690px; --y: 40px; --c: #b6f04a; --r: 10deg; }
+
+/* cream-a */
+.bubbles--cream-a .b1 { display: block; --x: 1480px; --y: -300px; --w: 760px; --h: 640px; --c: #bdebcb; --r: -10deg; }
+.bubbles--cream-a .b2 { display: block; --x: -260px; --y: 820px; --w: 720px; --h: 460px; --c: #ffd23f; --r: 0deg; }
+.bubbles--cream-a .b3 { display: block; --x: 1700px; --y: 860px; --w: 420px; --h: 360px; --c: #0e3b2e; --r: 0deg; }
+.bubbles--cream-a .d1 { display: block; --x: 1660px; --y: 20px; --c: #0e3b2e; --r: -20deg; }
+.bubbles--cream-a .d2 { display: block; --x: 1730px; --y: 920px; --c: #fff8e1; --r: 15deg; }
+
+/* cream-b */
+.bubbles--cream-b .b1 { display: block; --x: 1560px; --y: 620px; --w: 640px; --h: 620px; --c: #ffd23f; --r: 20deg; }
+.bubbles--cream-b .b2 { display: block; --x: -300px; --y: -260px; --w: 820px; --h: 520px; --c: #bdebcb; --r: 8deg; }
+.bubbles--cream-b .b3 { display: block; --x: 1760px; --y: -120px; --w: 300px; --h: 300px; --c: #0e3b2e; --r: 0deg; }
+.bubbles--cream-b .d1 { display: block; --x: 1400px; --y: 850px; --c: #0e3b2e; --r: -15deg; }
+
+/* cream-c */
+.bubbles--cream-c .b1 { display: block; --x: 1640px; --y: -200px; --w: 520px; --h: 480px; --c: #0e3b2e; --r: 0deg; }
+.bubbles--cream-c .b2 { display: block; --x: 1380px; --y: 780px; --w: 900px; --h: 500px; --c: #bdebcb; --r: -6deg; }
+.bubbles--cream-c .b3 { display: block; --x: -200px; --y: 380px; --w: 360px; --h: 420px; --c: #ffd23f; --r: 0deg; }
+.bubbles--cream-c .d1 { display: block; --x: 1690px; --y: 70px; --c: #fff8e1; --r: -25deg; }
+.bubbles--cream-c .d2 { display: block; --x: 1250px; --y: 880px; --c: #0e3b2e; --r: 10deg; }
+
+/* dark-a */
+.bubbles--dark-a .b1 { display: block; --x: 1500px; --y: -220px; --w: 760px; --h: 700px; --c: #1f5a47; --r: 15deg; }
+.bubbles--dark-a .b2 { display: block; --x: -240px; --y: 780px; --w: 720px; --h: 500px; --c: #0a2e23; --r: 0deg; }
+.bubbles--dark-a .b3 { display: block; --x: 1780px; --y: 820px; --w: 260px; --h: 240px; --c: #ffd23f; --r: 0deg; }
+.bubbles--dark-a .d1 { display: block; --x: 1560px; --y: 90px; --c: #fff8e1; --r: -20deg; }
+.bubbles--dark-a .d2 { display: block; --x: 1600px; --y: 860px; --c: #b6f04a; --r: 10deg; }
+
+/* dark-b */
+.bubbles--dark-b .b1 { display: block; --x: 1420px; --y: -320px; --w: 820px; --h: 560px; --c: #0a2e23; --r: 0deg; }
+.bubbles--dark-b .b2 { display: block; --x: -260px; --y: 880px; --w: 640px; --h: 380px; --c: #1f5a47; --r: 0deg; }
+.bubbles--dark-b .d1 { display: block; --x: 1640px; --y: 60px; --c: #b6f04a; --r: -20deg; }
+
+/* dark-c */
+.bubbles--dark-c .b1 { display: block; --x: 1300px; --y: 180px; --w: 760px; --h: 760px; --c: #1f5a47; --r: -6deg; }
+.bubbles--dark-c .b2 { display: block; --x: -220px; --y: -260px; --w: 600px; --h: 480px; --c: #0a2e23; --r: 0deg; }
+.bubbles--dark-c .b3 { display: block; --x: 1760px; --y: 900px; --w: 240px; --h: 220px; --c: #b6f04a; --r: 0deg; }
+.bubbles--dark-c .d1 { display: block; --x: 1230px; --y: 760px; --c: #fff8e1; --r: -15deg; }
+
+/* yellow-a */
+.bubbles--yellow-a .b1 { display: block; --x: 1240px; --y: 360px; --w: 980px; --h: 860px; --c: #f2c21b; --r: -12deg; }
+.bubbles--yellow-a .b2 { display: block; --x: -240px; --y: -260px; --w: 720px; --h: 520px; --c: #ffe27a; --r: 0deg; }
+.bubbles--yellow-a .b3 { display: block; --x: 1640px; --y: -140px; --w: 420px; --h: 380px; --c: #0e3b2e; --r: 0deg; }
+.bubbles--yellow-a .d1 { display: block; --x: 1470px; --y: 170px; --c: #0e3b2e; --r: -20deg; }
+.bubbles--yellow-a .d2 { display: block; --x: 1720px; --y: 40px; --c: #fff8e1; --r: 10deg; }
+
+/* yellow-b */
+.bubbles--yellow-b .b1 { display: block; --x: 1380px; --y: 460px; --w: 820px; --h: 760px; --c: #ffe27a; --r: 0deg; }
+.bubbles--yellow-b .b2 { display: block; --x: -280px; --y: 760px; --w: 760px; --h: 480px; --c: #f2c21b; --r: 0deg; }
+.bubbles--yellow-b .b3 { display: block; --x: 1700px; --y: -160px; --w: 400px; --h: 360px; --c: #0e3b2e; --r: 0deg; }
+.bubbles--yellow-b .d1 { display: block; --x: 1480px; --y: 110px; --c: #0e3b2e; --r: -20deg; }
+
+/* closing */
+.bubbles--closing .b1 { display: block; --x: 1080px; --y: 120px; --w: 1000px; --h: 900px; --c: #1f5a47; --r: 10deg; }
+.bubbles--closing .b2 { display: block; --x: -220px; --y: -240px; --w: 640px; --h: 520px; --c: #0a2e23; --r: 0deg; }
+.bubbles--closing .b3 { display: block; --x: 1180px; --y: 760px; --w: 200px; --h: 180px; --c: #b6f04a; --r: 0deg; }
+.bubbles--closing .d1 { display: block; --x: 1690px; --y: 60px; --c: #fff8e1; --r: -20deg; }
+.bubbles--closing .d2 { display: block; --x: 880px; --y: 780px; --c: #b6f04a; --r: 15deg; }
+
+/* mint */
+.bubbles--mint .b1 { display: block; --x: 1180px; --y: 600px; --w: 1100px; --h: 640px; --c: #0e3b2e; --r: -6deg; }
+.bubbles--mint .b2 { display: block; --x: 1500px; --y: -280px; --w: 700px; --h: 560px; --c: #a5ddb8; --r: 0deg; }
+.bubbles--mint .b3 { display: block; --x: 1040px; --y: 820px; --w: 300px; --h: 260px; --c: #ffd23f; --r: 0deg; }
+.bubbles--mint .d1 { display: block; --x: 1560px; --y: 760px; --c: #fff8e1; --r: -20deg; }
+.bubbles--mint .d2 { display: block; --x: 1690px; --y: 110px; --c: #0e3b2e; --r: 10deg; }
